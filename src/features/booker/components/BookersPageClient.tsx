@@ -35,7 +35,7 @@ export function BookersPageClient() {
 
       <Table>
         <Table.ScrollContainer>
-          <Table.Content aria-label="Bookers" className="min-w-[600px]">
+          <Table.Content aria-label="Bookers" className="min-w-150">
             <Table.Header>
               <Table.Column isRowHeader>Name</Table.Column>
               <Table.Column>Telephone Number</Table.Column>
@@ -47,7 +47,7 @@ export function BookersPageClient() {
             <Table.Body>
               {paginatedBookers.map((booker) => (
                 <Table.Row key={booker.id}>
-                  <Table.Cell>{booker.name}</Table.Cell>
+                  <Table.Cell>{booker.name.toUpperCase()}</Table.Cell>
 
                   <Table.Cell>{booker.phone_number}</Table.Cell>
 

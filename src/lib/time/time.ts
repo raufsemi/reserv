@@ -1,10 +1,5 @@
 const BASE_DATE = "2000-01-01";
 
-export function formatDate(date: string) {
-  const [year, month, day] = date.split("-");
-  return `${day}/${month}/${year}`;
-}
-
 export function formatTimeTo12h(time: string): string {
   if (!time) return "";
 

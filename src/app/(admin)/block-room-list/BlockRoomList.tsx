@@ -1,7 +1,7 @@
 "use client";
 
 import { deleteRoomOverrideAction } from "@/features/room-overrides/room-overrides.actions";
-import { formatDate } from "@/lib/time/time";
+import { formatDate } from "@/lib/date";
 import { Button, Card, Chip } from "@heroui/react";
 import { useMemo, useState } from "react";
 

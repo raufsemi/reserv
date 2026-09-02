@@ -3,6 +3,7 @@
 import { exportReservationReportCSV } from "@/features/dashboard/reservation-report-csv";
 import { useDashboard } from "./useDashboard";
 import { Button, Card, Input, Pagination, Table } from "@heroui/react";
+import { formatDate } from "@/lib/date";
 
 export function DashboardClient() {
   const {
@@ -86,7 +87,7 @@ export function DashboardClient() {
 
       <Table>
         <Table.ScrollContainer>
-          <Table.Content aria-label="Team members" className="min-w-[600px]">
+          <Table.Content aria-label="Team members" className="min-w-150">
             <Table.Header>
               <Table.Column isRowHeader>Name</Table.Column>
               <Table.Column>Phone Number</Table.Column>
@@ -105,7 +106,9 @@ export function DashboardClient() {
                   </Table.Cell>
                   <Table.Cell>{reservation.booker_phone}</Table.Cell>
                   <Table.Cell>{reservation.room_name}</Table.Cell>
-                  <Table.Cell>{reservation.booking_date}</Table.Cell>
+                  <Table.Cell>
+                    {formatDate(reservation.booking_date)}
+                  </Table.Cell>
                   <Table.Cell className="px-5 py-3">
                     <span
                       className={

@@ -40,6 +40,7 @@ export function useRoomTimeSlots(roomId: string | null, dayOfWeek: number) {
   }, [roomId, dayOfWeek]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchSlots();
   }, [fetchSlots]);
 
